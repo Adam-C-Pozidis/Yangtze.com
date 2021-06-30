@@ -11,9 +11,7 @@ Things you may want to cover:
 * System dependencies
 
 * Configuration
-    Install rails 6.0.3
-    run bundle install
-    run yarn add install
+
     
 * Database creation
     rails db:create
@@ -26,5 +24,7 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
+    Install rails 6.0.3
+    run bundle install
+    run yarn add bootstrap@4.6 Jquery popper.js
 * ...

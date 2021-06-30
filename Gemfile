@@ -28,6 +28,7 @@ gem "bootstrap", "~> 4.6"
 gem "simple_form"
 gem "cloudinary", "~> 1.16.0"
 gem "dotenv-rails", groups: [:development, :test]
+gem "pg_search"
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
