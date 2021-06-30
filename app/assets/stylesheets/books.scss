@@ -1,0 +1,20 @@
+// Place all the styles related to the Books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.book-item {
+    a {
+        text-decoration: none;
+        color: #0C1618;
+    }
+    
+}
+
+.card {
+    transition: .1s ease;
+    &:hover {
+        background-color: whitesmoke;
+        transition: .1s ease;
+    }
+}

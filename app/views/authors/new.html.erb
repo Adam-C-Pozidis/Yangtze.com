@@ -1,0 +1,8 @@
+<%= simple_form_for(@author) do |f| %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :age %>
+    <%= f.input :nationality %>
+    <%= f.input :photo, as: :file%>
+    <%= f.button :submit, class:"btn-success" %>
+<%end %>

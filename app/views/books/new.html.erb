@@ -1,0 +1,10 @@
+<%= simple_form_for(@book) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :year %>
+    <%= f.input :value %>
+    <%= f.input :pages %>
+    <%= f.association :author, label_method: :full_name, collection: Author.order(:last_name)%>
+    <%= f.input :description %>
+    <%= f.input :photo, as: :file%>
+    <%= f.button :submit, class:"btn-success" %>
+<%end %>
