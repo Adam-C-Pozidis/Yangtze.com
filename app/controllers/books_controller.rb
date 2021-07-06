@@ -7,6 +7,7 @@ class BooksController < ApplicationController
   end
 
   def show
+    @author = @book.author
   end
 
   def new

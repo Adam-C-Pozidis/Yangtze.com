@@ -1,2 +1,64 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <div class=""> 
+                <h2><%=@book.title%></h2> 
+            </div>
+
+            <div class=""> 
+                <%=cl_image_tag(@book.photo.key)%>
+            </div>
+
+            <br>
+
+            <div class="author-in-books" >
+                by <i> <%= link_to @book.author.full_name, author_path(@author)%> </i>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="description-box"> 
+                <p class="border-top">
+                    <b><%=@book.description%> </b>
+                </p>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="">
+                <h2 class="text-center">
+                    Information
+                </h2>
+            </div>
+
+            <div class="info-box d-flex justify-content-between">
+                <div class="info-item text-center">
+                    print length 
+                    <br>
+                    <%=@book.pages%> 
+                </div>
+
+                <div class="info-item text-center">
+                    Year <br>
+                    <%=@book.year%>
+                </div>
+                
+                <div class="info-item text-center">
+                    Value <br>
+                    <%=@book.value%>
+                </div>
+            </div>
+
+            <div id="add-to-cart-button" class="btn btn-primary">
+                <a href=#> Add to cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+    

@@ -28,3 +28,9 @@ Things you may want to cover:
     run bundle install
     run yarn add bootstrap@4.6 Jquery popper.js
 * ...
+
+
+* Information about this Project
+    This project focuses on the back-end of the website.
+    Especially in posgresql and Object-Oriented programming.
+    

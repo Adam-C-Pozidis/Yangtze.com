@@ -3,15 +3,24 @@
         <div class="col-3 book-item">
              <%= link_to(book) do %>
                 <div class="card">
-                    <img src=""class="card-img-top img-fluid">
                     <% if book.photo.attached? %>
                         <%= cl_image_tag book.photo.key %>
                     <% end %>
                     <div class="card-body">
-                        <h5 class="cart-title"><%= book.title %></h5> 
+                    
+                        <h5 class="cart-title">
+                            <%= book.title %>
+                        </h5> 
+
                         <br>
-                        <p class="card-text"> by <%= book.author.full_name%></p>
-                        <p><%= book.value %><p>
+
+                        <p class="card-text"> 
+                            by <i><%= book.author.full_name%></i>
+                        </p>
+
+                        <p>
+                            <%= book.value %>
+                        <p>
                     </div>
                 </div>
             </div>
