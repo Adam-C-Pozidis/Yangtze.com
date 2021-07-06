@@ -7,7 +7,7 @@
                         <%= cl_image_tag book.photo.key %>
                     <% end %>
                     <div class="card-body">
-                    
+
                         <h5 class="cart-title">
                             <%= book.title %>
                         </h5> 
@@ -27,6 +27,3 @@
         <%end%>
     <% end %>
 </div>
-
-<%= link_to "Add a new book", new_book_path%>
-<%= link_to "Add a new Author", new_author_path%>

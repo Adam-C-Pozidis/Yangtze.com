@@ -16,8 +16,9 @@
 
  @import "bootstrap/scss/bootstrap";
  @import "books";
+ @import "navbar";
 
  body {
+     margin-top: 80px;
      background-color: #FFFCF9;
-
  }

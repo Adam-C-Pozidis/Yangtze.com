@@ -1,0 +1,19 @@
+
+<nav id="navbar" class="navbar navbar-light justify-content-between fixed-top">
+  <a href="/" class="navbar-brand"> Yangtze.com </a>
+  <form class="form-inline">
+    <div class="dropdown">
+    <%= link_to "Add a new book", new_book_path, class:"btn"%>
+    <%= link_to "Add a new Author", new_author_path, class:"btn"%>
+      <button class="btn btn-secondary dropdown-toggle clickable" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div id="dropdown-update">
+            <%= link_to "Add a new book", new_book_path, class:"dropdown-item"%>
+            <%= link_to "Add a new Author", new_author_path%>
+            <a class="dropdown-item" href="#" data-method="delete">Log out</a>
+        </div>
+      </div>
+    </div>
+  </form>
+</nav>
