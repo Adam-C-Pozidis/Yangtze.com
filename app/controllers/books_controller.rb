@@ -1,7 +1,9 @@
 class BooksController < ApplicationController
   before_action :set_book, except: %i[index new create] #we are setting the @book variable to the book that we passed as parameter.
-
+  before_action :set_shopping_cart
+  
   def index
+    @cart_item = CartItem.new
     @book = Book.new # In order for the simple_form_for to work we need to call Book.new on a parameter.
     @books = Book.all
   end
@@ -30,6 +32,10 @@ class BooksController < ApplicationController
   end
 
   private
+
+  def set_shopping_cart
+    @shopping_cart = current_shopping_cart
+  end
 
   def set_book
     @book = Book.find(params[:id])  
