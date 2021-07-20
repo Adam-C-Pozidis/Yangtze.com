@@ -26,6 +26,7 @@ gem 'turbolinks', '~> 5'
 # gem 'image_processing', '~> 1.2'
 gem "bootstrap", "~> 4.6"
 gem "simple_form"
+gem "font-awesome-rails"
 gem "cloudinary", "~> 1.16.0"
 gem "dotenv-rails", groups: [:development, :test]
 gem "pg_search"

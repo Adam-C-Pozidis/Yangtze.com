@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_20_143149) do
+ActiveRecord::Schema.define(version: 2021_07_20_095945) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,22 @@ ActiveRecord::Schema.define(version: 2021_06_20_143149) do
     t.index ["author_id"], name: "index_books_on_author_id"
   end
 
+  create_table "cart_items", force: :cascade do |t|
+    t.bigint "shopping_cart_id", null: false
+    t.bigint "book_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["book_id"], name: "index_cart_items_on_book_id"
+    t.index ["shopping_cart_id"], name: "index_cart_items_on_shopping_cart_id"
+  end
+
+  create_table "shopping_carts", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "books", "authors"
+  add_foreign_key "cart_items", "books"
+  add_foreign_key "cart_items", "shopping_carts"
 end
